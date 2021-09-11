@@ -31,7 +31,7 @@ local RequestGift
 local Code
 while wait(5) do 
     Code = GenerateNitro()
-    RequestJson = RequestAPIFunc('ez').Body
+    RequestJson = RequestAPIFunc(Code).Body
     RequestDecoded = HttpService:JSONDecode(RequestJson)
     if RequestDecoded.message ~= 'You are being rate limited.' then 
         if RequestDecoded.message == 'Unknown gift code.' then 
